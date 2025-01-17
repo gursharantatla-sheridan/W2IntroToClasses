@@ -23,7 +23,7 @@ namespace W2IntroToClasses
             return _balance;
         }
 
-        public void SetBalance(double amount)
+        private void SetBalance(double amount)
         {
             _balance = amount;
         }
@@ -36,6 +36,9 @@ namespace W2IntroToClasses
 
         public void Withdraw(double amount)
         {
+            if (amount > _balance)
+                throw new Exception("Amount cannot be more than the balance");
+
             _balance -= amount;
         }
     }
