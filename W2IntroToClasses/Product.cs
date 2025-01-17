@@ -13,6 +13,17 @@ namespace W2IntroToClasses
         private string _name;
         private double _price;
 
+        private int _quantity;
+
+        public int Quantity
+        {
+            get { return _quantity; }
+            set { _quantity = value; }
+        }
+
+        public int MyProperty { get; set; }
+
+
         // constructors
         public Product()
         {
